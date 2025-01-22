@@ -109,11 +109,11 @@ arrowLeft.classList.add('disabled');
 const contactForm = document.getElementById("contactForm");
 
 function cForm() {
-    // contactForm.reset(); // This will reset the form fields to their initial values
-    contactForm.addEventListener("submit", function (event) {
-        event.preventDefault();
-        cForm(); // Resets the form after submission
+    contactForm.reset(); // This will reset the form fields to their initial values
+    // contactForm.addEventListener("submit", function (event) {
+    //     event.preventDefault();
+    //     cForm(); // Resets the form after submission
         
-    });
+    // });
 }
 
