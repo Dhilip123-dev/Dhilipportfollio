@@ -41,11 +41,10 @@ header {
     opacity: 0;
     color: var(--white-bg-color);
     transition: 0.5s;
-    transition: .5s;
     
 }
 header:hover{
-    box-shadow: 0 0 1rem var(--bg-color);
+    box-shadow: 0 0 1rem var(--second-bg-color);
 }
 header.active {
     animation: show-header 1.5s linear forwards; /* Add 's' to the duration */
@@ -729,6 +728,7 @@ section{
 @media screen and (max-width: 768px){
     #menu-icon{
         display: block;
+        position: relative;
     }
     nav{
         position:absolute ;
