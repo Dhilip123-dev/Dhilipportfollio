@@ -106,3 +106,14 @@ arrowLeft.addEventListener('click', () => {
 arrowLeft.classList.add('disabled');
 
 // Contact form
+const contactForm = document.getElementById("contactForm");
+
+function cForm() {
+    // contactForm.reset(); // This will reset the form fields to their initial values
+    contactForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+        cForm(); // Resets the form after submission
+        
+    });
+}
+
