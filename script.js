@@ -1,10 +1,29 @@
+// // Toggle bar
+// const menuIcon = document.querySelector('#menu-icon');
+// const navbar = document.querySelector('header nav');
+// menuIcon.addEventListener('click', () =>{
+//     menuIcon.classList.toggle('bx-x');
+//     navbar.classList.toggle('active');
+// });
+
 // Toggle bar
 const menuIcon = document.querySelector('#menu-icon');
 const navbar = document.querySelector('header nav');
-menuIcon.addEventListener('click', () =>{
+const navLInk = document.querySelectorAll('nav a'); // Select all nav links
+
+menuIcon.addEventListener('click', () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 });
+
+// Close the toggle menu when a link is clicked
+navLInk.forEach(link => {
+    link.addEventListener('click', () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    });
+});
+
 
 // navlinks
 const sections = document.querySelectorAll('section');
@@ -85,4 +104,30 @@ arrowLeft.addEventListener('click', () => {
 
 // Initialize the slider by disabling the left arrow
 arrowLeft.classList.add('disabled');
+
+// Contact form
+document.getElementById("contactForm").addEventListener("submit", function (event) {
+    event.preventDefault(); // Prevent default form submission behavior
+
+    const form = event.target;
+
+    // Submit the form data using Fetch API
+    fetch(form.action, {
+        method: form.method,
+        body: new FormData(form),
+    })
+    .then(response => {
+        if (response.ok) {
+            // Clear the form after a successful submission
+            form.reset();
+            alert("Message sent successfully!");
+        } else {
+            alert("Failed to send message. Please try again.");
+        }
+    })
+    .catch(error => {
+        console.error("Error:", error);
+        alert("An error occurred. Please try again.");
+    });
+});
 
