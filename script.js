@@ -106,28 +106,3 @@ arrowLeft.addEventListener('click', () => {
 arrowLeft.classList.add('disabled');
 
 // Contact form
-document.getElementById("contactForm").addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevent default form submission behavior
-
-    const form = event.target;
-
-    // Submit the form data using Fetch API
-    fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-    })
-    .then(response => {
-        if (response.ok) {
-            // Clear the form after a successful submission
-            form.reset();
-            alert("Message sent successfully!");
-        } else {
-            alert("Failed to send message. Please try again.");
-        }
-    })
-    .catch(error => {
-        console.error("Error:", error);
-        alert("An error occurred. Please try again.");
-    });
-});
-
