@@ -527,6 +527,7 @@ section{
 }
 .portfolio-box p{
     font-size: 1.6rem;
+    text-align: justify;
 }
 .portfolio-box .tech{
     margin: 2rem 0;
