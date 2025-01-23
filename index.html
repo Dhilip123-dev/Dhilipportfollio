@@ -338,14 +338,14 @@
                         <p>HTML5, CSS3, JAVASCRIPT</p>
                     </div>
                     <div class="live-github">
-                        <a href="#"><i class='bx bx-arrow-back'></i><span>Live Project</span></a>
+                        <a href="https://dhilip123-dev.github.io/dhilip27Hotel/"><i class='bx bx-arrow-back'></i><span>Live Project</span></a>
                         <a href="#"><i class='bx bxl-github'></i><span>Github Repositary</span></a>
                     </div>
                 </div>
                 <div class="portfolio-detail">
                     <p class="numb">02</p>
                     <h3>Portfolio</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, dolores. Quaerat nostrum optio perspiciatis sapiente blanditiis asperiores eveniet!</p>
+                    <p>I created a personal portfolio website using HTML, CSS, and JavaScript. The website showcases my projects, skills, and experience. It features a responsive design, optimized for desktop and mobile devices. I implemented interactive elements using JavaScript to enhance user engagement. It's a great way to demonstrate my coding skills.</p>
                     <div class="tech">
                         <p>HTML5, CSS3, JAVASCRIPT</p>
                     </div>
@@ -376,7 +376,7 @@
                             <img src="Image/HotelPic.png" alt="project1">
                         </div>
                         <div class="img-item">
-                            <img src="Image/HotelPic.png" alt="project2">
+                            <img src="Image/portfollio.png" alt="project2">
                         </div>
                     </div>
                  </div>
@@ -393,7 +393,7 @@
     <div class="contact-container">
         <div class="contact-box">
             <h2>Let's Work Together</h2>
-            <p class="desc">As a passionate developer, I’m excited to collaborate with you to bring your ideas to life through technology. Whether you need a custom web application, a responsive design, or a reliable backend system, I am ready to provide innovative and efficient solutions. Let’s work together to turn your vision into a functional, user-friendly product that meets your needs and exceeds expectations.</p>
+            <p class="desc">As a passionate developer, I'm excited to collaborate with you to bring your ideas to life through technology. Whether you need a custom web application, a responsive design, or a reliable backend system, I am ready to provide innovative and efficient solutions. Let’s work together to turn your vision into a functional, user-friendly product that meets your needs and exceeds expectations.</p>
             <div class="contact-detail">
                 <i class="ri-phone-fill"></i>
                 <div class="detail">
@@ -418,18 +418,23 @@
         </div>
 
         <div class="contact-box">
-            <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off" id="contactForm"> 
-                <h2 class="heading">Contact <span>Me!</span></h2>
-                <div class="field-box">
-                    <input type="hidden" name="access_key" value="27ee305f-ef14-4476-9fca-455481d68836">
-                    <input type="text" placeholder="Full Name" name="FullNAME" required>
-                    <input type="email" placeholder="Email" name="Email" required>
-                    <input type="text" placeholder="Phone Number" name="PhoneNumber" required>
-                    <input type="text" placeholder="Email Subject" name="EmailSubject" required>
-                    <textarea name="Message" id="" placeholder="Your Message" ></textarea>
-                </div>
-                <button type="submit" class="btn" name="submit"> Send Message</button>
-            </form>
+            <form
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            autocomplete="off"
+            id="contactForm"
+            onsubmit="return cForm(event)"    >
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <div class="field-box">
+            <input type="hidden" name="access_key" value="27ee305f-ef14-4476-9fca-455481d68836">
+            <input type="text" placeholder="Full Name" name="Full Name" required>
+            <input type="email" placeholder="Email" name="Email" required>
+            <input type="text" placeholder="Phone Number" name="Phone Number" required>
+            <input type="text" placeholder="Email Subject" name="Email Subject" required>
+            <textarea name="Message" placeholder="Your Message"></textarea>
+        </div>
+        <button type="submit" class="btn" name="submit">Send Message</button>
+    </form>
         </div>
     </div>
 </section>
