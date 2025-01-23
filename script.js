@@ -108,13 +108,13 @@ arrowLeft.classList.add('disabled');
 // Contact form
 const contactForm = document.getElementById("contactForm");
 
-    function cForm(event) {
-        event.preventDefault(); // Prevents default form submission
+    function cForm() {
+        // event.preventDefault(); // Prevents default form submission
 
         // Perform your API submission logic or custom success handling here
         // Example: simulate a successful submission
         setTimeout(() => {
-            alert("Form submitted successfully!");
+            alert("Thanks For Visiting My Website\n\nThe Form submitted successfully..!!");
             contactForm.reset(); // Resets the form fields after success
         }, 500); // Simulates some delay for success message
     }
