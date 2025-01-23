@@ -108,12 +108,14 @@ arrowLeft.classList.add('disabled');
 // Contact form
 const contactForm = document.getElementById("contactForm");
 
-function cForm() {
-    contactForm.reset(); // This will reset the form fields to their initial values
-    // contactForm.addEventListener("submit", function (event) {
-    //     event.preventDefault();
-    //     cForm(); // Resets the form after submission
-        
-    // });
-}
+    function cForm(event) {
+        event.preventDefault(); // Prevents default form submission
+
+        // Perform your API submission logic or custom success handling here
+        // Example: simulate a successful submission
+        setTimeout(() => {
+            alert("Form submitted successfully!");
+            contactForm.reset(); // Resets the form fields after success
+        }, 500); // Simulates some delay for success message
+    }
 
