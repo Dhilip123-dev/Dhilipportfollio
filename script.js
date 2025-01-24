@@ -119,3 +119,45 @@ const contactForm = document.getElementById("contactForm");
         }, 500); // Simulates some delay for success message
     }
 
+
+// Scroll reveal
+
+// ScrollReveal({
+//     distance: '80px',
+//     duration: 2000,
+//     delay: 200,
+// });
+
+// ScrollReveal().reveal('.home-detail, heading , .field-box',  { origin: 'top' });
+// ScrollReveal().reveal('.home-img, .services-container, .resume-box, .skills-container  ', { origin: 'bottom' });
+// ScrollReveal().reveal('.resume-detail ' , { origin: 'left' });
+// ScrollReveal().reveal('.resume-item, .resume-list, .resume-list', { origin: 'right' });
+
+
+// CURSOR
+
+const cursor = document.querySelector(".cursor");
+let timeout;
+
+// Check if we're on the home page
+if (document.body.id === "home-page") {
+    document.addEventListener("mousemove", (e) => {
+        let x = e.clientX;
+        let y = e.clientY;
+
+        cursor.style.top = `${y}px`;
+        cursor.style.left = `${x}px`;
+        cursor.style.display = "block";
+
+        function mouseStopped() {
+            cursor.style.display = "none";
+        }
+
+        clearTimeout(timeout);
+        timeout = setTimeout(mouseStopped, 1000);
+    });
+
+    document.addEventListener("mouseout", () => {
+        cursor.style.display = "none";
+    });
+}
