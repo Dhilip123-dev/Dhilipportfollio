@@ -24,7 +24,6 @@ html{
 
 body{
     color: var(--white-bg-color);
-    cursor: none;
 }
 
 header {
@@ -797,6 +796,9 @@ section{
         margin: 4rem 0;
         transition: .3s;
     }
+    header .cursor {
+        z-index: -1;
+    }
     .home {
         flex-direction: column-reverse;
         justify-content: center;
@@ -831,10 +833,16 @@ section{
     .contact-box .field-box{
         grid-template-columns: 1fr;
     }
+    header .cursor {
+        z-index: -1;
+    }
 }
 @media screen and (max-width: 450px){
     html{
         font-size: 50%;
+    }
+    header .cursor {
+        z-index: -1;
     }
 }
 @media screen and (max-width: 400px){
@@ -857,5 +865,8 @@ section{
     }
     .contact-box h2{
         font-size: 3.5rem;
+    }
+    header .cursor {
+        z-index: -1;
     }
 }
