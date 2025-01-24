@@ -158,6 +158,7 @@ if (document.body.id === "home-page") {
     });
 
     document.addEventListener("mouseout", () => {
-        cursor.style.display = "none";
+        cursor.style.display = "none";  // Hide cursor when mouse leaves the page
     });
 }
+
