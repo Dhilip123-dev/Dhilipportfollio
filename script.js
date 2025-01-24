@@ -161,4 +161,3 @@ if (document.body.id === "home-page") {
         cursor.style.display = "none";  // Hide cursor when mouse leaves the page
     });
 }
-
