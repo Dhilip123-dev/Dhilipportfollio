@@ -383,7 +383,7 @@ section{
 .services-box h3{
     font-size: 3rem;
     margin: .5rem 0 2rem;
-    transition: .5s;
+    transition: .5s; 
 }
 .services-box:hover h3{
     color: var(--main-bg-color);
@@ -391,6 +391,11 @@ section{
 .services-box p{
     font-size: 1.6rem;
 }
+/* [data-aos="fade-up-left"],
+[data-aos="fade-up-right"] {
+    transform: translateX(0) !important; /* Prevent elements from moving too far out 
+} */
+
 
 /* RESUME CONTAINER */
 /* resume */
@@ -819,6 +824,9 @@ section{
 
     .portfolio-container .portfolio-box:first-child{
         order: 1;
+    }
+    .portfolio-box .live-github a{
+        margin-left: 10px;
     }
     .contact-box .field-box{
         grid-template-columns: repeat(2, 1fr);
