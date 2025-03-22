@@ -161,3 +161,25 @@ if (document.body.id === "home-page") {
         cursor.style.display = "none";  // Hide cursor when mouse leaves the page
     });
 }
+
+// Light mode
+// Select the Darkmode button and icon
+const darkmodeButton = document.querySelector('.Darkmode');
+const icon = darkmodeButton.querySelector('.Darkmode i');
+const body = document.body;
+
+// Listen for the click event on the button
+darkmodeButton.addEventListener('click', () => {
+    
+    body.classList.toggle('darkmode');
+
+    // Toggle icon class between bx-moon and bx-sun
+    if (body.classList.contains('darkmode')) {
+        icon.classList.remove('bx-moon');
+        icon.classList.add('bx-sun');
+    } else {
+        icon.classList.remove('bx-sun');
+        icon.classList.add('bx-moon');
+    }
+});
+
