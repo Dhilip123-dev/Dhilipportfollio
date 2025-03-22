@@ -16,6 +16,8 @@
     --main-bg-color:#7cf03d;
     --white-bg-color:#fff;
     --disabled-bg-color:#fff3;
+    --darkmode-bg-color:#f9fbfc;
+    --darkmode-text-color:#0e0e0e;
 }
 html{
     font-size:62.5% ;
@@ -23,7 +25,27 @@ html{
 }
 
 body{
+    background: var(--bg-color);
     color: var(--white-bg-color);
+    transition: .4s;
+}
+body.darkmode{
+    background: var(--darkmode-bg-color) !important;
+    color: var(--darkmode-text-color);
+}
+
+.Darkmode i{
+    font-size: 20px;
+    position: fixed;
+    top: 100px;
+    right: 20px;
+    z-index: 100000;
+    transition: .5s ease;
+    cursor: pointer;
+}
+
+.Darkmode i:hover{
+    transform: rotate(30deg);
 }
 
 header {
@@ -88,14 +110,7 @@ nav a.active{
     display: none;
 }
 
-/* .cursor-main{
-    
-    background: #000115;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; 
-} */
+
 .cursor{
     z-index: 999;
     position: fixed;
@@ -130,12 +145,11 @@ nav a.active{
     transform: translate(-50%,-50%);
     border-radius: 50%;
 }
-
 section{
     width: 100%;
     height: 100%;
     padding: 10rem 9% 2rem;
-    background: var(--bg-color);
+    /* background: var(--bg-color); */
     /* margin-top: 20px; */
 }
 /* .bars-box{
@@ -171,6 +185,7 @@ section{
     /* display: none; */
     
 }
+
 .home-detail h1{
     font-size: clamp(3.5rem, 10vw, 5.5rem);
 }
